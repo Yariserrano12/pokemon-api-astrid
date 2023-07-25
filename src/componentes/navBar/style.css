@@ -1,0 +1,30 @@
+
+.navi {
+    background-color: rgb(202, 158, 159);
+    height: 100px; 
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+
+  .App{
+    font-family: sans-serif;
+    text-align: center;
+  } 
+
+ .navbar-image{
+    height: 100px;
+    width: 100px; 
+    display: flex;
+    flex-direction: row;
+    text-align: center; 
+    margin-left: 200px; 
+
+
+ } 
+
+ .corazon{
+    margin-right: 100px;
+    text-align: right;
+    margin-top: -5%;
+ }
