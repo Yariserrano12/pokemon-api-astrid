@@ -16,7 +16,7 @@ const Search =() => {
    }
     const onClick = async (e) => { 
         const data = await searchPokemon(Busqueda) 
-        
+        console.log(data);
 
     }
     return ( 
@@ -39,3 +39,25 @@ const Search =() => {
   };
    
    export default Search
+
+
+
+
+// function PokedexScreen({ pokemon, loading, error }){
+//   return (
+//     <div className="pokedex-screen">
+//       <div className="pokemon-info">
+//         <h2 className="pokemon-name">{pokemon.name}</h2>
+//         <img
+//           className="pokemon-img"
+//           src={pokemon.sprites.front_default}
+//           alt={pokemon.name}
+//         />
+//         <ul className="pokemon-stats">
+//           // Aquí iteraremos sobre la lista de estadísticas
+//         </ul>
+//       </div>
+//     </div>
+//   )
+// }
+

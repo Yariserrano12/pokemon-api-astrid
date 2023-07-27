@@ -1,6 +1,6 @@
 import React from "react";
-import Pagination from "./Pagination";
-import Pokemon from "./Pokemon";
+import Pagination from "../pagination";
+import Pokemon from "../pokemon";
 
 const Pokedex = (props) => {
   const { pokemons, page, setPage, total, loading } = props;
