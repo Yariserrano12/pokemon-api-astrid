@@ -1,63 +1,28 @@
-import React from 'react' 
-import './style.css'; 
 
-import { searchPokemon } from '../../api/api';
+import React, { useState } from 'react';
 
-const  {useState} = React;
+const Search = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
 
-const Search =() => {
-   const [Busqueda, setBusqueda] = useState("");
-
-   const onChange = (evento) => { 
-   setBusqueda(evento.target.value); 
-  
-  
-
-   }
-    const onClick = async (e) => { 
-        const data = await searchPokemon(Busqueda) 
-        console.log(data);
-
-    }
-    return ( 
-      <div>
-     <div> 
-   <input className='input' placeholder='Buscar pokemon...' onChange={onChange}/> 
-    
-    </div> 
-
-     <div>
-        <button onClick={onClick}>Buscar</button>
-     </div>
-
-
-
-
-      </div>
-     
-    );
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
   };
-   
-   export default Search
 
+  const handleSearch = () => {
+    onSearch(searchTerm);
+  };
 
+  return (
+    <div>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={handleChange}
+        placeholder='Buscar pokemon...'
+      />
+      <button onClick={handleSearch}>Buscar</button>
+    </div>
+  );
+};
 
-
-// function PokedexScreen({ pokemon, loading, error }){
-//   return (
-//     <div className="pokedex-screen">
-//       <div className="pokemon-info">
-//         <h2 className="pokemon-name">{pokemon.name}</h2>
-//         <img
-//           className="pokemon-img"
-//           src={pokemon.sprites.front_default}
-//           alt={pokemon.name}
-//         />
-//         <ul className="pokemon-stats">
-//           // Aquí iteraremos sobre la lista de estadísticas
-//         </ul>
-//       </div>
-//     </div>
-//   )
-// }
-
+export default Search;
