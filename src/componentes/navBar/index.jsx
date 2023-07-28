@@ -3,7 +3,7 @@ import './style.css';
 
 const NavBar =() => {
   let imgUrl =
-  "https://raw.githubusercontent.com/ashbaldry/pokeapi/master/man/figures/logo.png";
+  "https://logos-marcas.com/wp-content/uploads/2020/05/Pokemon-Emblema.jpg";
   return (
     <nav className='navi'>
       <div />
