@@ -1,28 +1,23 @@
-import React from "react";
+import React from 'react';
 
-
-import { Izquierda, Derecha} from "../info/index";
-
-const Pagination = (props) => {
-  const { onLeftClick, onRightClick, page, totalPages } = props;
+const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+  const handlePageChange = (page) => {
+    onPageChange(page);
+  };
 
   return (
-    <div className="pagination">
-      <button className="pagination-btn" onClick={onLeftClick}>
-        <div className="icon">
-          <Izquierda />
-        </div>
-      </button>
-      <div>
-        {page} de {totalPages}
-      </div>
-      <button className="pagination-btn" onClick={onRightClick}>
-        <div className="icon">
-          <Derecha />
-        </div>
-      </button>
+    <div>
+      {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+        <button
+          key={page}
+          onClick={() => handlePageChange(page)}
+          disabled={page === currentPage}
+        >
+          {page}
+        </button>
+      ))}
     </div>
   );
 };
 
-export default Pagination;
+export default Pagination
