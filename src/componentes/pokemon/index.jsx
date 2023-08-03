@@ -22,7 +22,7 @@ Navigate ("/pokemon/" + pokemon.name)
  }; 
 
   return (
-    <div className="card"  style={{ width: '10rem',minHeight: '15rem', backgroundColor: '#F0F0C9' }} >
+    <div className="card"  style={{ width: '10rem',minHeight: '15rem', backgroundColor: '#F0F0C9', justifyContent: "center" }} >
       <div className="pokemon-img-container">
         <img
           src={pokemon.sprites.front_default}

@@ -1,13 +1,11 @@
-.App {
-  text-align: center;
-}
+
 
 .pokegallery {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: space-between;
-  margin: 10px; 
+  margin: 5px; 
   
   
 }
@@ -16,19 +14,15 @@
   margin: 10px;
   border-radius: 5px;
   box-shadow: 6px 10px 5px 0px rgba(199, 197, 199, 0.75); 
- 
+  
 } 
 
-.imagenes{ 
-  margin-top: auto;
-  height: 120px; 
-  width: 120px; 
-  background-color: burlywood; 
-  flex-direction: row;
-}
+
 
 body{
-background-color: rgb(174, 202, 219);
+background-color: rgb(123, 162, 235);
+background-repeat: no-repeat;
+background-size: cover;
 } 
 
 
@@ -36,16 +30,26 @@ background-color: rgb(174, 202, 219);
 
 .Caracteristicas{
   border: solid 2px ; 
-  height: 20%;
+  height: 100%;
   width: 150px;
-  background-color: rgb(212, 212, 112);
+  background-color: rgb(103, 103, 25); 
+  display: grid;
+  grid-row-start:initial ;
   
 } 
 
 .pokemones{
-  height: 200px;
-  width: 200px; 
-  margin-left: -20px;
-  margin-top: -10%;
+  height: 40%;
+  width: 40%; 
+  margin-right: 60px;
+  margin-top: -1000%;
+  margin-left: 50%;
   
+} 
+
+.pokemon-type-text{
+  text-align: center;
+} 
+.card-top{
+  text-align: center;
 }

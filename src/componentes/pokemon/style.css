@@ -6,8 +6,8 @@
   } 
   .imagenes{ 
     margin-top: auto;
-    height: 120px; 
-    width: 120px; 
-    background-color: burlywood; 
+    height: 150px; 
+    width: 160px; 
+    background-color: rgb(211, 174, 118); 
     flex-direction: row;
   }
