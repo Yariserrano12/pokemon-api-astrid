@@ -40,4 +40,12 @@ background-color: rgb(174, 202, 219);
   width: 150px;
   background-color: rgb(212, 212, 112);
   
+} 
+
+.pokemones{
+  height: 200px;
+  width: 200px; 
+  margin-left: -20px;
+  margin-top: -10%;
+  
 }

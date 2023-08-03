@@ -23,7 +23,7 @@ const Pokedex = ({ pokemon }) => {
        <h5>VELOCIDAD</h5>
        <p>{pokemon.stats[5].base_stat}</p>
 
-      <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+      <img className='pokemones' src={pokemon.sprites.front_default} alt={pokemon.name} />
     
       {/* Otros detalles del pokémon */}
     </div>

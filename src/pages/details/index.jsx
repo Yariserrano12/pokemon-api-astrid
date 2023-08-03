@@ -30,7 +30,7 @@ const Details =() => {
       <button className='boton' onClick={Return} > 
         Return
       </button> 
-      <div> 
+      <div className='pagina'> 
       {searchedPokemon && ( <Pokedex pokemon={searchedPokemon} />  )}
       
     </div>
