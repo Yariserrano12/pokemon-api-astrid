@@ -1,0 +1,13 @@
+.card {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 6px 10px 5px 0px rgba(199, 197, 199, 0.75); 
+   
+  } 
+  .imagenes{ 
+    margin-top: auto;
+    height: 120px; 
+    width: 120px; 
+    background-color: burlywood; 
+    flex-direction: row;
+  }

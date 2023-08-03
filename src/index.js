@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css'
 import reportWebVitals from './reportWebVitals';
 import Main from './pages/main';
+import AppRouter from './router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Main/>
+  <AppRouter/>
   </React.StrictMode>
 );
 

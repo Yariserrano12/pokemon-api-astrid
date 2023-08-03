@@ -1,29 +1,36 @@
 import React, { useContext } from "react";
-import FavoriteContext from "../context";
-
+//import FavoriteContext from "../context";
+import { useNavigate } from "react-router-dom"; 
+import "./style.css" 
 const Pokemon = (props) => {
   const { pokemon } = props;
-  const { favoritePokemons, updateFavoritePokemons } = useContext(
-    FavoriteContext
-  );
-
+ // const { favoritePokemons, updateFavoritePokemons } = useContext(
+   // FavoriteContext
+  //);
+  const Navigate = useNavigate ()
   const redHeart = "❤️";
   const blackHeart = "🖤";
-  const heart = favoritePokemons.includes(pokemon.name) ? redHeart : blackHeart;
+ // const heart = favoritePokemons.includes(pokemon.name) ? redHeart : blackHeart;
 
   const clickHeart = (e) => {
     e.preventDefault();
-    updateFavoritePokemons(pokemon.name);
+   // updateFavoritePokemons(pokemon.name);
   };
+ const clickCard = () => {
+Navigate ("/pokemon/" + pokemon.name)
+ console.log (clickCard)
+ }; 
 
   return (
-    <div className="pokemon-card">
+    <div className="card"  style={{ width: '10rem',minHeight: '15rem', backgroundColor: '#F0F0C9' }} >
       <div className="pokemon-img-container">
         <img
           src={pokemon.sprites.front_default}
           alt={pokemon.name}
-          className="pokemon-img"
-        />
+          className= 'imagenes'
+          onClick={clickCard}
+        /> 
+       
       </div>
       <div className="card-body">
         <div className="card-top">
@@ -41,7 +48,7 @@ const Pokemon = (props) => {
             })}
           </div>
           <button onClick={clickHeart} className="pokemon-heart-btn">
-            <div className="pokemon-favorite">{heart}</div>
+           <div className="pokemon-favorite">{}</div>
           </button>
         </div>
       </div>

@@ -16,7 +16,7 @@
   margin: 10px;
   border-radius: 5px;
   box-shadow: 6px 10px 5px 0px rgba(199, 197, 199, 0.75); 
- font-family: "mi fuente";
+ 
 } 
 
 .imagenes{ 
@@ -32,10 +32,7 @@ background-color: rgb(174, 202, 219);
 } 
 
 
-@font-face {
-  font-family: "mi fuente";
-  src: url("../../../public/Bartleen\ SANS.otf") format(truetype) 
-} 
+
 
 .Caracteristicas{
   border: solid 2px ; 

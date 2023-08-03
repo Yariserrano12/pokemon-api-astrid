@@ -5,6 +5,7 @@ import Search from '../../componentes/busqueda/index';
 import Pagination from '../../componentes/pagination/index';
 import Pokedex from '../../componentes/pokedex/index';
 import "./App.css" 
+import Pokemon from '../../componentes/pokemon';
 
 
 function Main() {
@@ -63,15 +64,7 @@ function Main() {
           <Pokedex pokemon={searchedPokemon} />
         ) : (
           pokemonsToShow.map((img, i) => (
-            <div id={img.id} key={img.id}>
-              <div className='card' style={{ width: '10rem', height: '15rem', backgroundColor: '#F0F0C9' }}>
-                <img className='imagenes' src={img.sprites.other.home.front_default} alt='pokemon' />
-                <div>
-                  <h5 >{img.name}</h5>
-                  <h6>type: {img.types[0].type.name}</h6>
-                </div>
-              </div>
-            </div>
+            <Pokemon key= {i} pokemon= {img} />
           ))
         )}
       </div>
